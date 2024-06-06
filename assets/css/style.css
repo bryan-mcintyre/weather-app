@@ -15,12 +15,63 @@ body {
 /* Input */
 .cityInput {
     padding: 10px;
-    font-size: 100%;
+    font-size: 75%;
     font-weight: bold;
     border: solid #686767;
     border-radius: 5px;
     margin: 10px;
 }
 
+.cityInput:hover {
+    background-color: #f7f6f6;
+}
 
+/* Button */
+.submit {
+     padding: 10px 20px;
+     font-weight: bold;
+     font-size: 75;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     background-color: #d6d6d6;
+     color: #345774;
+}
 
+.submit:hover {
+    background-color: #c1c1c1;
+}
+
+/* Card */
+.card {
+     background-color: #e9e8e8;
+     padding: 10px;
+     border-radius: 5px;
+     border: solid 1.25px #686767;
+     width: auto;
+     height: auto;
+     text-align: center;
+     font-size: 85%;
+     box-shadow: 2px 2px 5px #686767;
+}
+
+h2 {
+    font-weight: bolder;
+    font-size: 200%;
+    color: #345774;
+}
+
+p {
+    color: #345774;
+
+}
+
+.temp {
+    font-size: 175%;
+    font-weight: bold;
+}
+
+.error {
+    font-weight: bolder;
+    color: #c51515;
+}
