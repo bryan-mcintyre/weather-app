@@ -23,6 +23,7 @@ weatherForm.addEventListener("click", function(event) {
     const city = cityInput.value
 
     if(city) {
+        // Geo Coding API
         fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${apiKey}`)
             .then(function(response) {
                 return response.json()
@@ -34,6 +35,7 @@ weatherForm.addEventListener("click", function(event) {
                 const cityLat = data[0].lat
                 const cityLon = data[0].lon
 
+                // Current Conditions API
                 fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${cityLat}&lon=${cityLon}&appid=${apiKey}&units=imperial`)
                     .then(function(response) {
                         return response.json()
@@ -41,6 +43,7 @@ weatherForm.addEventListener("click", function(event) {
                     .then(function(data) {
                         console.log(data)
                         localStorage.setItem("Weather", JSON.stringify(data))
+                        
                         const name = document.createElement("h2")
                         const temp = document.createElement("p")
                         const humidity = document.createElement("p")
@@ -65,6 +68,7 @@ weatherForm.addEventListener("click", function(event) {
                         card.appendChild(humidity)
                         card.appendChild(windSpeed)
 
+                        // 5-Day Forecast API
                         fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${cityLat}&lon=${cityLon}&cnt=5&appid=${apiKey}&units=imperial`)
                             .then(function(response) {
                                 return response.json()
@@ -73,24 +77,28 @@ weatherForm.addEventListener("click", function(event) {
                                 console.log(data)
                                 localStorage.setItem("Forecast", JSON.stringify(data))
 
+                                // City Name Variables
                                 const name1 = document.createElement("h2")
                                 const name2 = document.createElement("h2")
                                 const name3 = document.createElement("h2")
                                 const name4 = document.createElement("h2")
                                 const name5 = document.createElement("h2")
 
+                                // Temp variables
                                 const temp1 = document.createElement("p")
                                 const temp2 = document.createElement("p")
                                 const temp3 = document.createElement("p")
                                 const temp4 = document.createElement("p")
                                 const temp5 = document.createElement("p")
 
+                                // Humidity variables
                                 const humidity1 = document.createElement("p")
                                 const humidity2 = document.createElement("p")
                                 const humidity3 = document.createElement("p")
                                 const humidity4 = document.createElement("p")
                                 const humidity5 = document.createElement("p")
 
+                                // Wind Speed variables
                                 const windSpeed1 = document.createElement("p")
                                 const windSpeed2 = document.createElement("p")
                                 const windSpeed3 = document.createElement("p")

@@ -8,21 +8,19 @@
     </head>
 
     <body>
+        <header>Weather Dashboard</header>
+
+        <!-- Search bar -->
         <form class="weatherForm">
             <input type="text" class="cityInput" placeholder="Enter a city">
             <button type="submit" class="submit">Get Weather</button>
         </form>
+
+        <!-- Current Weather -->
         <h2 class="current" style="display: none">Current Conditions</h2>
-        <div class="card" style="display: none">
-            <!-- <h2 class="cityName">Minneapolis</h2>
-            <p class="date"></p>
-            <p class="temp">84°F</p>
-            <p class="humidity">60%</p>
-            <p class="windSpeed">15mph</p>
-            <p class="icon">⛈️</p>
-            <p class="error">Please enter a valid city</p> -->
-        </div>
-        <br>
+        <div class="card" style="display: none"></div>
+        
+        <!-- 5-Day Forecast -->
         <h2 class="future" style="display: none">5-Day Forecast</h2>
         <div class="forecast" style="display: none">
             <div class="card forecast-card-1"></div>
