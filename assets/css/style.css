@@ -5,6 +5,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 100%;
 }
 
 /* Form Styling */
@@ -51,8 +52,15 @@ body {
      width: auto;
      height: auto;
      text-align: center;
-     font-size: 85%;
+     font-size: 50%;
      box-shadow: 2px 2px 5px #686767;
+}
+
+.forecast {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    width: auto;
 }
 
 h2 {
