@@ -205,21 +205,6 @@ weatherForm.addEventListener("click", function(event) {
     
 })
 
-
-        
-// Display weather info
-function displayWeatherInfo() {
-    
-        
-                    
-    }
-
-
-// Current conditions emojis
-function weatherEmoji() {
-
-}
-
 // Display error function
 function displayError() {
     const errorDisplay = document.createElement("p")
