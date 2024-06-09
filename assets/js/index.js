@@ -4,6 +4,8 @@
 const weatherForm = document.querySelector(".weatherForm")
 const cityInput = document.querySelector(".cityInput")
 const card = document.querySelector(".card")
+const current = document.querySelector(".current")
+const future = document.querySelector(".future")
 const forecast = document.querySelector(".forecast")
 const forecastCard1 = document.querySelector(".forecast-card-1")
 const forecastCard2 = document.querySelector(".forecast-card-2")
@@ -43,6 +45,8 @@ weatherForm.addEventListener("click", function(event) {
                         const temp = document.createElement("p")
                         const humidity = document.createElement("p")
                         const windSpeed = document.createElement("p")
+
+                        current.style.display = "flex"
 
                         card.textContent = ""
                         
@@ -94,6 +98,7 @@ weatherForm.addEventListener("click", function(event) {
                                 const windSpeed5 = document.createElement("p")
 
                                 forecast.style.display = "flex"
+                                future.style.display = "flex"
                                 
                                 // Forecast Card 1
                                 forecastCard1.textContent = ""
