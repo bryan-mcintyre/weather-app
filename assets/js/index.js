@@ -32,25 +32,29 @@ weatherForm.addEventListener("click", function(event) {
                     .then(function(data) {
                         console.log(data)
                         localStorage.setItem("Weather", JSON.stringify(data))
+                        const name = document.createElement("h2")
                         const temp = document.createElement("p")
                         const humidity = document.createElement("p")
+                        const windSpeed = document.createElement("p")
 
                         card.textContent = ""
+                        
+                        name.textContent = data.name
+                        temp.textContent = `${data.main.temp}°`
+                        humidity.textContent = `Humidity: ${data.main.humidity}%`
+                        windSpeed.textContent = `Wind Speed: ${data.wind.speed} mph`
 
-                        temp.textContent = data[0].temp
-                        humidity.textContent = data[0].humidity
+                        name.classList.add("h2")
+                        temp.classList.add("temp")
+                        humidity.classList.add("p")
+                        windSpeed.classList.add("p")
+                        
+                        card.appendChild(name)
                         card.appendChild(temp)
                         card.appendChild(humidity)
+                        card.appendChild(windSpeed)
 
-                        for (let i = 0; i < data.length; i++) {
-                            const temp = document.createElement("p")
-                            const humidity = document.createElement("p")
-                            card.textContent = ""
-                            temp.textContent = data[i].main.temp
-                            humidity.textContent = data[i].main.humidity
-                            card.appendChild(temp)
-                            card.appendChild(humidity)
-                    }})
+                        })
             })
     } else {
         displayError()
