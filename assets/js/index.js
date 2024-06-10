@@ -24,7 +24,7 @@ weatherForm.addEventListener("click", function(event) {
 
     if(city) {
         // Geo Coding API
-        fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${apiKey}`)
+        fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${apiKey}`)
             .then(function(response) {
                 return response.json()
             })
