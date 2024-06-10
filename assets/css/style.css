@@ -40,7 +40,7 @@ header {
 .submit {
      padding: 10px 20px;
      font-weight: bold;
-     font-size: 75;
+     font-size: 75%;
      border: none;
      border-radius: 5px;
      cursor: pointer;
@@ -61,7 +61,7 @@ header {
      width: auto;
      height: auto;
      text-align: center;
-     font-size: 100%;
+     font-size: 200%;
      box-shadow: 2px 2px 5px #686767;
 }
 
