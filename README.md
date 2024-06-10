@@ -11,8 +11,8 @@ Link to dashboard:
 https://bryan-mcintyre.github.io/weather-app/
 
 Screenshots of dashboard:
-![page upon loading with a search bar and empty page](<Screenshot 2024-06-10 161325.png>)
-![page after searching for a city](<Screenshot 2024-06-10 162839.png>)
+![webpage upon loading](<assets/images/Screenshot 2024-06-10 161325.png>)
+![webpage after entering a city](<assets/images/Screenshot 2024-06-10 162839.png>)
 
 Enter a city in the search bar to see the current weather conditions and 5-day forecast for that city.
 
